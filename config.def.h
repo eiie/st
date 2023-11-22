@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "consolas-font:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "consolas-font:pixelsize=16:antialias=true:autohint=true";
+static int borderpx = 5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -98,42 +98,68 @@ float alpha = 0.777;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+//	/* 8 normal colors */
+//	"black",
+//	"red3",
+//	"green3",
+//	"yellow3",
+//	"blue2",
+//	"magenta3",
+//	"cyan3",
+//	"gray90",
+//
+//	/* 8 bright colors */
+//	"gray50",
+//	"red",
+//	"green",
+//	"yellow",
+//	"#5c5cff",
+//	"magenta",
+//	"cyan",
+//	"white",
+//
+//	[255] = 0,
+//
+//	/* more colors can be added after 255 to use with DefaultXX */
+//	"#cccccc",
+//	"#555555",
+//	"gray90", /* default foreground colour */
+//	"black", /* default background colour */
+//};
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
 
-	[255] = 0,
+	/*  colorscheme */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+    "#222222",
+    "#ac4142",
+    "#90a959",
+    "#f4bf75",
+    "#6a9fb5",
+    "#aa759f",
+    "#75b5aa",
+    "#d0d0d0",
+
+    "#505050",
+    "#ac4142",
+    "#90a959",
+    "#f4bf75",
+    "#6a9fb5",
+    "#aa759f",
+    "#75b5aa",
+    "#f5f5f5",
+
+    [255] = 0,
+
+    "#cccccc"
 };
-
-
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+//unsigned int defaultfg = 258;
+//unsigned int defaultbg = 259;
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
@@ -151,6 +177,7 @@ static unsigned int cursorshape = 2;
  */
 
 static unsigned int cols = 80;
+//static unsigned int rows = 24;
 static unsigned int rows = 24;
 
 /*

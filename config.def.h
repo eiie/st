@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "consolas-font:pixelsize=16:antialias=true:autohint=true";
-static int borderpx = 5;
+static int borderpx = 32;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.777;
+float alpha = 0.85, alphaUnfocused = 0.80;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -162,6 +162,7 @@ unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
+unsigned int bg = 0, bgUnfocused = 0;
 
 /*
  * Default shape of cursor
